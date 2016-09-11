@@ -1,0 +1,40 @@
+1. Create a Remote Repo on Github.
+
+2. Connect a Local Development Folder.
+
+i. Navigate to Dev Folder
+ii. Initialize Local git folder.
+iii. Connect to Remote Repo.
+iv. Verify Remote Repo Address.
+    
+git init
+git status
+git remote add origin https://github.com/donirby/jekyll-template-slate.git
+git remote -v
+git status
+
+3. Push the existing repo from the command line to gh-pages branch.
+
+i. Link it to the remote repo.
+ii. Checkout gh-pages branch.
+iii. add _site to gitignore
+iv. Push local site to remote.
+
+git status
+git checkout --orphan gh-pages (for gh-pages in a branch)
+git status
+git add -A
+git status
+git commit -a -m "initial commit"
+git status
+git push origin gh-pages (or master)
+
+Verify Remote Repo Branch for Content and Site Publish Address under Settings on the gh-pages branch, not master branch.
+
+4. Update Site
+git status
+git add -A
+git status
+git commit -a -m "add new page"
+git status
+git push origin gh-pages
